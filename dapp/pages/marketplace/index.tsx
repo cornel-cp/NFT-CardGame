@@ -97,8 +97,8 @@ const Marketplace = () => {
 
   return (
     <Layout>
-      <div className="grid grid-cols-4 gap-4">
-        <div className="...">
+      <div className="grid grid-cols-4 gap-4" >
+        <div className="... bg-black bg-opacity-50 px-2 text-white">
           <h2 className="text-2xl mb-3">Management</h2>
           <button
             disabled={randoming}
@@ -165,8 +165,8 @@ const Marketplace = () => {
             {loading
               ? [...Array(12)].map((item: any, i: any) => <Loading key={i} />)
               : nftDataFilter.map((item: any, i: any) => (
-                  <SellCard key={i} item={item} />
-                ))}
+                <SellCard key={i} item={item} />
+              ))}
           </div>
         </div>
         <Modal

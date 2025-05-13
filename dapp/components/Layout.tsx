@@ -23,8 +23,10 @@ const Layout = (props: any) => {
       <header>
         {props.noNavbar ? null : <Navbar />}
       </header>
-      <main className={`${!props.noFull && 'max-w-screen-xl mx-auto mt-3 px-2 xs:px-0'}`}>
-        {props.children}
+      <main className={`${!props.noFull && 'px-2 xs:px-0 bg-opacity-30'}`} style={{ background: "url(/images/marketplace.png)",}}>
+        <div className="max-w-screen-xl mx-auto">
+          {props.children}
+        </div>
       </main>
       {/* <Footer /> */}
     </>

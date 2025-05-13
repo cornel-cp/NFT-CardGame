@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white text-black border-b-2">
+    <nav className=" text-yellow-200 border-b-2 " style={{background:'url(/images/1.jpg)', backgroundRepeat:"x-repeat", backgroundPositionY:"center"}}>
       <div className="flex justify-between max-w-screen-xl mx-auto px-2 xs:px-0 py-3">
         <div className="flex space-x-5">
           <div className="text-2xl mt-1">
@@ -77,7 +77,7 @@ const Navbar = () => {
           ) : (
             <button
               onClick={init}
-              className="text-black bg-white px-3 py-2 rounded-md"
+              className="text-yellow-300 border border-yellow-200 px-3 py-2 rounded-md"
             >
               Login with Metamask
             </button>

@@ -22,9 +22,9 @@ const Home = () => {
   ];
   return (
     <Layout noFull noNavbar>
-      <div className=" w-full flex overflow-y-hidden relative">
+      <div className=" w-full flex overflow-y-hidden relative text-white">
         {/* navbar absoulte */}
-        <div className="absolute top-0 left-0 w-full">
+        <div className="absolute top-0 left-0 w-full bg-gradient-to-b from-black to-transparent">
           <div className="max-w-screen-xl mx-auto mt-3 px-2 xs:px-0 flex justify-between">
             <div className="text-2xl mt-1 ">
               <Link href="/">
@@ -47,9 +47,9 @@ const Home = () => {
             </div>
             <div className="mt-2">
               <Link href="/marketplace">
-                <a className="relative w-full">
+                <a className="relative w-full hover:scale-105 scale-100">
                   <img src="/images/button.png" width={100} alt="" />
-                  <p className="absolute top-1.5 w-full ml-6 text-white whitespace-nowrap">
+                  <p className="absolute top-1 w-full ml-6 text-white whitespace-nowrap">
                     LOG IN
                   </p>
                 </a>
@@ -58,13 +58,13 @@ const Home = () => {
           </div>
         </div>
         <div className="absolute top-20 left-0 w-full">
-          <div className="max-w-screen-xl mx-auto mt-3 px-2 xs:px-0">
-            <h1 className="text-7xl">
+          <div className="max-w-screen-xl mx-auto mt-3 px-2 xs:px-0 flex flex-col items-start">
+            <h1 className="text-7xl text-amber-300">
               Game Card NFT
               <br />
               Multiplayer
             </h1>
-            <div className="mt-2 text-2xl">
+            <div className="flex mt-2 text-2xl text-gray-300 bg-black bg-opacity-40 p-4 rounded-xl">
               <p>
                 It is a card game based on blackjack.
                 <br /> You can battle other players with Card NFTs with
@@ -74,7 +74,7 @@ const Home = () => {
             <div className="relative mt-2">
               <Link href="/game">
                 <a target="_blank" className="inline-block">
-                  <div className="absolute top-4 ml-10 text-white text-4xl">
+                  <div className="absolute top-2 mt-1 ml-10 text-white text-4xl">
                     START
                   </div>
                   <img width={200} src="/images/button2.png" />
@@ -86,7 +86,7 @@ const Home = () => {
         <img
           width={"100%"}
           className="m-auto h-screen w-full object-cover overflow-y-hidden"
-          src="https://www.teahub.io/photos/full/361-3611215_pixel-art.jpg"
+          src="/images/wallpaper.jpeg"
           alt=""
         />
 
