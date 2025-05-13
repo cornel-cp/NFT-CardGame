@@ -1,60 +1,68 @@
-HELLO
-===============
+# ♠️ NFT Blackjack Multiplayer Game
 
-![main](./screenshort/main.png)
+A multiplayer blackjack game powered by **NFT cards** and built using **Godot (v3.4)** with **Nakama** for real-time multiplayer. Players log in via **Metamask**, and all smart contract logic runs on the **Binance Smart Chain Testnet**.
 
-This is a NFT GAME based on blackjack multiplayer, First I tried to use Unity and photon but I would like to try Gotdot so I switched to Godot with nakama multiplayer. (Godot version 3.4 only && Login via Metamask)
+Originally developed using Unity and Photon, this project now runs entirely in Godot for a more streamlined and open-source-friendly experience.
 
-You can battle other players with Card NFTs with different abilities.
+---
 
-# Game Screenshot
-![login](./screenshort/login.png)
-![loading](./screenshort/loading.png)
-![find](./screenshort/find.png)
-![main](./screenshort/main.png)
-![main2](./screenshort/main2.png)
-![main3](./screenshort/main3.png)
-![main4](./screenshort/main4.png)
+## 🃏 Gameplay
 
-# How does my multiplayer work
-Imagine me and my friend playing chess in different rooms. When I moved my checkers from d2 to d3, I told my friend to move the checkers from d2 to d3, and if my friend moved d7 to d6.
-My friend will tell me again.
+Battle other players using NFT-based cards—each card has unique abilities that can influence your strategy and turn the odds in your favor.
 
-# DApp
-![dapp](./screenshort/1.png)
-## Marketplace
-![dapp2](./screenshort/2.png)
-![dapp3](./screenshort/3.png)
-![dapp4](./screenshort/4.png)
-![dapp5](./screenshort/5.png)
-## Mint
-![dapp6](./screenshort/6.png)
+---
 
-# Smart Contract
-My smart contract on Binance smart chain testnet use hardhat to deploy
+## 🖼️ Screenshots
 
-Example transaction
+![main](./screenshort/1.png)  
+![main2](./screenshort/2.png)  
+![main3](./screenshort/3.png)  
+![main4](./screenshort/4.png)
+
+---
+
+## 🔄 How Multiplayer Works
+
+Multiplayer logic is turn-based and message-driven.  
+Think of it like two friends playing chess remotely:
+
+- If I move a piece from `d2` to `d3`, I send that action to my opponent.
+- When my opponent moves `d7` to `d6`, they send it back to me.
+
+This ensures both clients stay synchronized in real time.
+
+---
+
+## 🛠 Smart Contract
+
+Smart contracts are written and deployed using **Hardhat** on the Binance Smart Chain Testnet.
+
+**Sample transaction:**  
 https://testnet.bscscan.com/token/0xe97bd2b6b71647f0c3517613f19f8c561b98a7e8
 
-# How to get start
-```
-(Note Game)
-You should get Moralis API server from moralis.io with binance testnet then open Godot(v.3.4) go to Login Screen Click Login Node You'll see Server Url and App Id from the right side change it if you not see you can open Login script and update it.
-PS.You should check the Nakama connect to the your ip (ServerConnect.gd line 3)
+---
 
-(Note Metamask)
-if you want 1 BNB go to
+## 🚀 Getting Started
+
+### 🎮 Game Setup (Godot v3.4)
+1. Get a **Moralis API Server** from [moralis.io](https://moralis.io/) (select Binance Testnet).
+2. Open the project in **Godot 3.4**.
+3. Go to the **Login Screen**, select the **Login Node**, and update the `Server URL` and `App ID` on the right side.
+   - If not visible, open the Login script and edit the values directly.
+4. In `ServerConnect.gd`, make sure Nakama is pointing to your IP (check line 3).
+
+---
+
+### 🦊 Metamask & BNB
+
+To get test BNB:  
 https://testnet.binance.org/faucet-smart
 
-(Note Smart contract)
-if you want to deploy and get you own smart contract you can do this
-1. change the key at secret.json (key is Metamask private key you will get 92b99... then you just add 0x before your private key)
-2. npm i
-3. npm run deploy:binance
+---
 
-How to run
-(you should have docker first)
-1. docker-compose up
+### 📦 Deploying Your Own Smart Contract
 
-App: http://localhost
-```
+1. Open `secret.json` and replace the private key with your **Metamask private key**, prefixed with `0x`.
+2. Install dependencies:
+   ```bash
+   npm install
